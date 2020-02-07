@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+
+heroku container:push web    -a eggs-and-ham
+heroku container:release web -a eggs-and-ham
+
+echo "Should be live at http://eggs-and-ham.herokuapp.com/"
